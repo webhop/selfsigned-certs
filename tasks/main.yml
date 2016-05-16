@@ -4,7 +4,7 @@
   file:
     path: /etc/apache2/ssl
     recurse: yes
-    state: direcory
+    state: directory
     owner: root
     group: root
     mode: 0755
