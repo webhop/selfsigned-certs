@@ -1,0 +1,25 @@
+---
+
+- name: Create /etc/apache2/ssl if it doesn't already exist
+  file:
+    path: /etc/apache2/ssl
+    recurse: yes
+    state: direcory
+    owner: root
+    group: root
+    mode: 0755
+
+- name: Install development SSL certificate
+  copy:
+    src: development.ointernal.net.pem
+    dst: /etc/apache2/ssl/cert.pem
+    owner: root
+    group: root
+    mode: 0644
+
+- name: Install development SSL key
+    src: development.ointernal.net.key.pem
+    dst: /etc/apache2/ssl/key.pem
+    owner: root
+    group: root
+    mode: 0644
