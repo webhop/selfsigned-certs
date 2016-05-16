@@ -12,7 +12,7 @@
 - name: Install development SSL certificate
   copy:
     src: development.ointernal.net.pem
-    dst: /etc/apache2/ssl/cert.pem
+    dest: /etc/apache2/ssl/cert.pem
     owner: root
     group: root
     mode: 0644
@@ -20,7 +20,7 @@
 - name: Install development SSL key
   copy:
     src: development.ointernal.net.key.pem
-    dst: /etc/apache2/ssl/key.pem
+    dest: /etc/apache2/ssl/key.pem
     owner: root
     group: root
     mode: 0644
