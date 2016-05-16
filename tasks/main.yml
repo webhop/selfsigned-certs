@@ -18,6 +18,7 @@
     mode: 0644
 
 - name: Install development SSL key
+  copy:
     src: development.ointernal.net.key.pem
     dst: /etc/apache2/ssl/key.pem
     owner: root
